@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG Esperança - Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Voluntários e Doadores</h1>
+    <nav>
+      <a href="index.html">Início</a> |
+      <a href="projetos.html">Projetos</a> |
+      <a href="cadastro.html">Cadastro</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Preencha o Formulário</h2>
+      <form>
+        <fieldset>
+          <legend>Informações Pessoais</legend>
+
+          <label>Nome Completo:
+            <input type="text" name="nome" required>
+          </label><br><br>
+
+          <label>E-mail:
+            <input type="email" name="email" required>
+          </label><br><br>
+
+          <label>CPF:
+            <input type="text" name="cpf" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+          </label><br><br>
+
+          <label>Telefone:
+            <input type="tel" name="telefone" placeholder="(00) 00000-0000" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" required>
+          </label><br><br>
+
+          <label>Data de Nascimento:
+            <input type="date" name="nascimento" required>
+          </label><br><br>
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço</legend>
+
+          <label>Endereço:
+            <input type="text" name="endereco" required>
+          </label><br><br>
+
+          <label>CEP:
+            <input type="text" name="cep" placeholder="00000-000" pattern="\d{5}-\d{3}" required>
+          </label><br><br>
+
+          <label>Cidade:
+            <input type="text" name="cidade" required>
+          </label><br><br>
+
+          <label>Estado:
+            <select name="estado" required>
+              <option value="">Selecione...</option>
+              <option>SP</option>
+              <option>RJ</option>
+              <option>MG</option>
+              <option>BA</option>
+              <option>RS</option>
+              <option>DF</option>
+            </select>
+          </label><br><br>
+        </fieldset>
+
+        <button type="submit">Enviar Cadastro</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ONG Esperança - Cuidando de quem precisa</p>
+  </footer>
+</body>
+</html>

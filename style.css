@@ -1,0 +1,197 @@
+ 
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50;
+    color: white;
+    line-height: 1,6
+ }
+
+ a{
+    color: #3498db;
+    text-decoration: none;
+ }
+
+ a :hover{
+    text-decoration: underline;
+ }
+
+ image{
+    max-width: 100%;
+    height: auto;
+    display: block;
+ }
+
+ header{
+    background-color: #2c3e50;
+    color: white;
+    padding: 16px;
+ }
+
+header h1{
+    font-size: 32px;
+    margin-bottom: 16px;
+} 
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav ul li{
+    position: relative;
+}
+
+nav ul li a{
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+nav ul li:hover ul{
+    display: block;
+}
+
+nav ul li ul li{
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle div{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  nav ul{
+    display: none;
+    flex-direction: column;
+    background-color: #2c3e50;
+    width: 100%;
+  }
+  
+  nav ul.active{
+    display: flex;
+  }
+
+.menu-toggle{
+    display: block;
+}
+  }
+
+
+ main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 16px;
+    padding: 32px;
+ }
+
+ section{
+    grid-column: span 12;
+    background-color:#2c3e50 ;
+    
+
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+ }
+
+
+ .card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1)
+ }
+
+ button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px, 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0,3s;
+ }
+
+ button:hover {
+    background-color: rgb(213, 221, 103);
+ }
+
+ button:active {
+    background-color: rgb(245, 242, 48);
+ }
+
+ input, select, textarea {
+   width: 100%;
+   padding: 8px;
+   margin-bottom: 16px;
+   border: 1px solid #95a5a6;
+   border-radius: 4px;
+ }
+
+ input:focus, select:focus, textarea:focus {
+   outline: 2px solid #3498db;
+ }
+
+   .alert {
+      padding: 16px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+   }
+
+   .alert-sucess { background-color: #2ecc71; color: white;}
+   .alert-erro { background-color: #e74c3c; color: white;}
+
+   footer {
+      text-align: center;
+      padding: 16px;
+      background-color: #2c3e50;
+      color: white;
+      margin-top: 32px;
+   }
+
+   @media (min-width: 576px) {
+     main { grid-template-columns: repeat( 6, 1fr)}
+    }
+
+    @media (min-width: 768px) {
+      main{grid-template-columns: repeat(8, 1fr);}
+    }
+
+    @media (min-width: 992px) {
+       main { grid-template-columns: repeat(12, 1fr);}      
+    }
+
+    @media (max-width: 576px){
+      section {
+          padding: 8px;
+      }
+    }
+
